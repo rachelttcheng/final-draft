@@ -1,0 +1,388 @@
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+.navbar {
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #616363;
+}
+
+.navbar li {
+    padding: 15px;
+    list-style: none;
+    font-size: 20px;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+}
+
+.navbar li:last-child {
+    margin-bottom: 20px;
+}
+
+#index_intropic {
+    background-image: url("../images/bicep_pose.jpg");
+}
+
+#aboutme_intropic {
+    background-image: url("../images/about_me_banner.jpg");
+    background-position: center;
+}
+
+.largeintropic {
+    background-color: #ebf0ef;
+    color: white;
+    min-height: 325px;
+    background-position: 0% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.largeintropic.fadein {
+    animation-name: appear;
+    animation-duration: 4s;
+}
+
+.largeintropic.skewin {
+    animation-name: skewtonormal;
+    animation-duration: 4s;
+}
+
+.largeintropic h1 {
+    font-size: 50px;
+    line-height: 1;
+}
+
+.largeintropic p {
+    font-size: 15px;
+    line-height: 1;
+}
+
+body {
+    margin: 0;
+    background-color: #ebf0ef;
+    font-family: 'Heebo', 'Roboto', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.active {
+    border-bottom: 1px solid black;
+}
+
+header h1.regularpageheader {
+    font-size: 25px;
+    padding: 30px 25px 15px 25px;
+    text-align: left;
+    margin: 0px 25px;
+    background-color: white;
+}
+
+main {
+    text-align: left;
+    background-color: white;
+    margin: 0px 25px;
+    line-height: 1.5em;
+    padding: 0px 25px;
+}
+
+main img:hover {
+    box-shadow: 0 5px 15px #616363;
+    transition: box-shadow 0.5s ease-in-out;
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.firstelement {
+    padding-top: 15px;
+}
+
+.lastelement {
+    padding-bottom: 15px;
+}
+
+.motivationpoint {
+    padding-top: 25px;
+}
+
+.motivationpoint img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.motivationpoint p {
+    text-align: left;
+}
+
+.singlephoto {
+    text-align: center;
+}
+
+.singlephoto img.medium {
+    width: 150px;
+}
+
+.singlephoto img.large {
+    width: 300px;
+}
+
+.sidebysideimages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+img.square {
+    width: 275px;
+    height: 275px;
+}
+
+img.narrow {
+    width: 275px;
+    height: 200px;
+}
+
+.textabovethreephotos {
+    display: grid;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    grid-template-areas: "text text text"
+                         "img1 img2 img3";
+    grid-template-rows: fit-content() fit-content();
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.textabovethreephotos .text {
+    grid-area: text;
+}
+
+.textabovethreephotos .img1 {
+    grid-area: img1;
+    width: 100%;
+}
+
+.textabovethreephotos .img2 {
+    grid-area: img2;
+    width: 100%;
+}
+
+.textabovethreephotos .img3 {
+    grid-area: img3;
+    width: 100%;
+}
+
+/*
+.sidebysidetextimg {
+    display: grid;
+    grid-template: 50px repeat(3, 150px) / 0.25fr 1.5fr 150px 1fr 0.75fr;
+    grid-template-areas: "header header header header header"
+                         "none text small1 bigimg empty"
+                         "none text small2 bigimg empty"
+                         "none text small3 bigimg empty";
+    gap: 10px;
+}
+
+.sidebysidetextimg .motivationheader {
+    grid-area: header;
+}
+
+.sidebysidetextimg img.large {
+    grid-area: bigimg;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.sidebysidetextimg img.small1 {
+    grid-area: small1;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.sidebysidetextimg img.small2 {
+    grid-area: small2;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.sidebysidetextimg img.small3 {
+    grid-area: small3;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.sidebysidetextimg p{
+    grid-area: text;
+    text-align: right;
+    left: 50px;
+    padding-right: 10px;
+    align-self: center;
+    max-height: 100%;
+    overflow: hidden;
+}
+*/
+
+span.motivationheader {
+    color: #cc3399;
+    font-size: 1.25em;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+main img {
+    padding-bottom: 10px;
+    object-fit: cover;
+}
+
+main img.nexttotext {
+    width: 30%;
+    height: 550px;
+}
+
+img.small {
+    width: 125px;
+    height: 175px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+input[type=submit] {
+    background-color: #38803C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#message {
+    width: 100%;
+}
+  
+footer {
+    text-align: center;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    color: #616363;
+    padding: 25px 10px;
+}
+
+.fa-dumbbell {
+    margin-bottom: 10px;
+}
+
+@keyframes appear {
+    from {opacity: 0.25;}
+    to {opacity: 1;}
+}
+
+@keyframes skewtonormal {
+    from {transform: skew(-15deg);}
+    to {transform: skew(0);}
+}
+
+@media screen and (min-width: 700px) {
+    .navbar {
+        padding-top: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .navbar ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .navbar li:last-child {
+        margin-bottom: 0;
+    }
+    
+    .largeintropic {
+        min-height: 600px;
+        display: block;
+    }
+
+    .largeintropic h1 {
+        font-size: 100px;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -75%);
+        position: absolute;
+        width: 500px;
+    }
+    
+    .largeintropic p {
+        font-size: 25px;
+        text-align: right;
+        width: 500px;
+        top: 56%;
+        left: 74%;
+        transform: translate(-56%, -74%);
+        position: absolute;
+    }
+
+    main {
+        margin: 0px 50px;
+    }
+
+    header h1.regularpageheader {
+        margin: 0px 50px;
+    }
+
+    .singlephoto img {
+        width: 200px;
+    }
+
+    img.small {
+        width: 125px;
+    }
+
+    .sidebysideimages {
+        flex-direction: row;
+    }
+
+    img.narrow {
+        width: 33%;
+        height: 350px;
+    }
+
+}
