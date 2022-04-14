@@ -38,7 +38,6 @@ a.skip{
 
 #index_intropic {
     background-image: url("../images/bicep_pose.jpg");
-    background-position: 0% 25%;
 }
 
 #aboutme_intropic {
@@ -49,7 +48,7 @@ a.skip{
 .largeintropic {
     background-color: #ebf0ef;
     color: white;
-    min-height: 325px;
+    min-height: 350px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,6 +211,43 @@ p {
     grid-area: bottom3;
 }
 
+.musclegroupsection {
+    padding: 20px 0px;
+}
+
+.musclegroupspec {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.musclegroupspec img {
+    height: 150px;
+    flex-shrink: 2;
+}
+
+.musclegroupspec p {
+    flex-shrink: 1;
+    font-size: 12px;
+}
+
+.exercisedemo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.exercisedemo img {
+    width: 200px;
+    height: 275px;
+}
+
+.exercisedemo p {
+    font-size: 12px;
+    text-align: center;
+}
 
 img.square {
     width: 275px;
@@ -232,12 +268,14 @@ img.narrow {
                          "img1 img2 img3";
     grid-template-rows: fit-content() 200px;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
 }
 
 .textabovethreephotos img {
-    height: 100%;
+    height: 200px;
     object-fit: cover;
     overflow: hidden;
+    border-radius: 50%;
 }
 
 .textabovethreephotos .text {
@@ -283,7 +321,6 @@ img.small {
 }
 
 input {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -291,17 +328,19 @@ input {
     box-sizing: border-box; 
 }
 
-input[type=submit] {
-    background-color: #38803C;
+button[type=submit] {
+    background-color: #cc3399;
+    font-family: inherit;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
+    border-radius: 2px;
     cursor: pointer;
     width: 100%;
 }
 
-#usermessage {
+#usermessage, input[type=email] {
     width: 100%;
 }
 
@@ -357,6 +396,14 @@ input[type=submit] {
 .flip-card-back p {
     padding: 0px 20px;
 }
+
+#regardsto {
+    padding-top: 15px;
+}
+
+.regardstooption {
+    font-size: 13px;
+}
   
 footer {
     text-align: center;
@@ -397,11 +444,6 @@ footer {
     }
 }
 
-/** DESKTOP ONLY VIEW **/
-@media screen and (min-width: 860px) {
-
-}
-
 /** TABLET AND DESKTOP VIEW **/
 @media screen and (min-width: 720px) {
     .navbar {
@@ -417,14 +459,18 @@ footer {
     .navbar li:last-child {
         margin-bottom: 0;
     }
+
+    #index_intropic {
+        background-position: 0% 10%;
+    }
     
     .largeintropic {
-        min-height: 600px;
+        min-height: 500px;
         display: block;
     }
 
     .largeintropic h1 {
-        font-size: 100px;
+        font-size: 80px;
         top: 50%;
         left: 75%;
         transform: translate(-50%, -75%);
@@ -433,12 +479,12 @@ footer {
     }
     
     .largeintropic p {
-        font-size: 25px;
+        font-size: 20px;
         text-align: right;
         width: 500px;
         top: 56%;
-        left: 74%;
-        transform: translate(-56%, -74%);
+        left: 68%;
+        transform: translate(-56%, -68%);
         position: absolute;
     }
 
@@ -465,5 +511,56 @@ footer {
     img.narrow {
         width: 33%;
         height: 350px;
+    }
+
+    #outfitspread {
+        grid-template-areas: "outfit1 outfit1 outfit2 outfit2 outfit3 outfit3"
+                             "top1 bottom1 top2 bottom2 top3 bottom3";
+        grid-template-rows: 400px 150px;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .exercisedemo {
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .exercisedemo p {
+        width: 400px;
+        text-align: left;
+        padding: 0px 10px;
+    }
+}
+
+/** DESKTOP ONLY VIEW **/
+@media screen and (min-width: 860px) {
+    #index_intropic {
+        background-position: 0% 20%;
+    }
+
+    #outfitspread {
+        grid-template-areas: "outfit1 top1 outfit2 top2 outfit3 top3"
+                             "outfit1 bottom1 outfit2 bottom2 outfit3 bottom3";
+        grid-template-rows: repeat(2, 200px);
+        grid-template-columns: repeat(3, 1fr 0.5fr);
+    }
+
+    .textabovethreephotos img {
+        height: 350px;
+    }
+
+    .exercisedemo {
+        padding: 20px 0px;
+        justify-content: center;
+    }
+    
+    .exercisedemo p {
+        width: 200px;
+        height: 275px;
+        text-align: left;
+        padding: 0px 10px;
     }
 }
