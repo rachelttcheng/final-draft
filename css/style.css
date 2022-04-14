@@ -169,7 +169,7 @@ p {
                          "outfit3 top3"
                          "outfit3 bottom3";
     grid-template-rows: repeat(6, 240px);
-    grid-template-columns: 350px 175px;
+    grid-template-columns: 0.67fr 0.33fr;
     grid-gap: 5px;
     padding-bottom: 10px;
 }
@@ -529,14 +529,14 @@ footer {
     }
 
     .exercisedemo p {
-        width: 400px;
+        width: 75%;
         text-align: left;
         padding: 0px 10px;
     }
 }
 
 /** DESKTOP ONLY VIEW **/
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 1367px) {
     #index_intropic {
         background-position: 0% 20%;
     }
