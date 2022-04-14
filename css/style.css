@@ -219,7 +219,7 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .musclegroupspec img {
@@ -520,9 +520,17 @@ footer {
         grid-template-columns: repeat(6, 1fr);
     }
 
+    .musclegroupspec {
+        flex-direction: row;
+    }
+
+    .musclegroupspec p {
+        font-size: 15px;
+    }
+
     .exercisedemo {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-content: center;
         flex-wrap: wrap;
         align-items: center;
@@ -532,6 +540,7 @@ footer {
         width: 75%;
         text-align: left;
         padding: 0px 10px;
+        font-size: 13px;
     }
 }
 
